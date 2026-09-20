@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:quiz/data/datasources/quiz_local_data_source.dart';
 import 'package:quiz/domain/entities/question.dart';
 import 'package:quiz/domain/entities/quiz_result.dart';
+import 'package:quiz/domain/repositories/quiz_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class QuizLocalDataSourceImpl implements QuizLocalDataSource {
+class QuizLocalDataSourceImpl implements QuizRepository {
   static const _historyKey = 'quiz_history';
 
   final SharedPreferencesAsync _preferences = SharedPreferencesAsync();

@@ -1,10 +1,9 @@
 import '../../domain/entities/question.dart';
 import '../../domain/entities/quiz_result.dart';
 import '../../domain/repositories/quiz_repository.dart';
-import '../datasources/quiz_local_data_source.dart';
 
 class QuizRepositoryImpl implements QuizRepository {
-  final QuizLocalDataSource localDataSource;
+  final QuizRepository localDataSource;
 
   QuizRepositoryImpl({required this.localDataSource});
 
