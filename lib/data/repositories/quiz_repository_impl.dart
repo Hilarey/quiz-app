@@ -2,7 +2,6 @@ import '../../domain/entities/question.dart';
 import '../../domain/entities/quiz_result.dart';
 import '../../domain/repositories/quiz_repository.dart';
 import '../datasources/quiz_local_data_source.dart';
-import '../models/quiz_result_model.dart';
 
 class QuizRepositoryImpl implements QuizRepository {
   final QuizLocalDataSource localDataSource;
@@ -26,7 +25,7 @@ class QuizRepositoryImpl implements QuizRepository {
 
   @override
   Future<void> saveQuizResult(QuizResult result) {
-    final model = QuizResultModel(
+    final model = QuizResult(
       correctAnswers: result.correctAnswers,
       totalQuestions: result.totalQuestions,
       date: result.date,

@@ -1,10 +1,10 @@
-import '../models/question_model.dart';
-import '../models/quiz_result_model.dart';
+import 'package:quiz/domain/entities/question.dart';
+import 'package:quiz/domain/entities/quiz_result.dart';
 
 abstract class QuizLocalDataSource {
-  Future<List<QuestionModel>> getQuestions();
+  Future<List<Question>> getQuestions();
 
-  Future<void> saveQuizResult(QuizResultModel result);
+  Future<void> saveQuizResult(QuizResult result);
 
-  Future<List<QuizResultModel>> getQuizHistory();
+  Future<List<QuizResult>> getQuizHistory();
 }
